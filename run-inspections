@@ -5,7 +5,7 @@
  */
 
 foreach (['/vendor/autoload.php', '/../autoload.php', '/../../autoload.php', '/../vendor/autoload.php'] as $autoloadFile) {
-    if (file_exists($autoloadFile)) {
+    if (file_exists(__DIR__ . $autoloadFile)) {
         require_once __DIR__ . $autoloadFile;
         break;
     }

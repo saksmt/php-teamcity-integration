@@ -5,6 +5,7 @@
     "name": "Kirill Saksin",
     "email": "kirillsaksin@yandex.ru"
   }],
+  "license": "MIT",
   "homepage": "https://github.com/saksmt/php-teamcity-integration",
   "require": {
     "php": ">=5.4"
