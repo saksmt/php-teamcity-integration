@@ -1,8 +1,0 @@
-#!/bin/bash
-
-cd $(dirname $0)
-
-echo "#!/usr/bin/env php" > run-inspections
-cat src/Application.php | sed -r "s/^\\s+//g" | tr "\n" " " | php -w >> run-inspections
-tail -n1 bootstrap.php >> run-inspections
-chmod +x run-inspections

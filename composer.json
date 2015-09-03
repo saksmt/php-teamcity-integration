@@ -1,0 +1,15 @@
+{
+  "name": "smt/teamcity-integration",
+  "description": "Simple script to generate a couple of files, like unit-test reports and so on , for teamcity",
+  "authors": [{
+    "name": "Kirill Saksin",
+    "email": "kirillsaksin@yandex.ru"
+  }],
+  "homepage": "https://github.com/saksmt/php-teamcity-integration",
+  "require": {
+    "php": ">=5.4"
+  },
+  "bin": [
+    "run-inspections"
+  ]
+}

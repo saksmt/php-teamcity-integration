@@ -1,1 +1,3 @@
-/run-inspections
+/vendor
+/bin
+/composer.lock
