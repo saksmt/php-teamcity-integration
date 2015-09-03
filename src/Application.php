@@ -109,7 +109,7 @@ class Application
     private function loadConfig()
     {
         if (file_exists('ci.json')) {
-            $this->config = self::merge($this->config, json_decode(file_get_contents('ci.json', true)));
+            $this->config = self::merge($this->config, json_decode(file_get_contents('ci.json'), true));
         }
     }
 
