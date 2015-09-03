@@ -4,6 +4,12 @@
  * @author Kirill Saksin <kirillsaksin@yandex.ru>
  */
 
-require_once __DIR__ . '/vendor/autoload.php';
+foreach (['/vendor/autoload.php', '/../autoload.php', '/../../autoload.php', '/../vendor/autoload.php'] as $autoloadFile) {
+    if (file_exists($autoloadFile)) {
+        require_once __DIR__ . $autoloadFile;
+        break;
+    }
+}
+
 
 (new \Smt\TeamCityIntegration\Application\Application())->run(isset($argv[1]) ? $argv[1] : '/srv');
