@@ -9,6 +9,11 @@
   "require": {
     "php": ">=5.4"
   },
+  "autoload": {
+    "psr-4": {
+      "Smt\\TeamCityIntegration\\Application\\": "src/"
+    }
+  },
   "bin": [
     "run-inspections"
   ]
