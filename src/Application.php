@@ -91,16 +91,18 @@ class Application
         $result = [];
         foreach ($original as $key => $value) {
             if (isset($redefined[$key])) {
-                if (is_array($redefined[$key])) {
+                if (is_array($redefined[$key]) && is_array($value)) {
                     $result[$key] = self::merge($value, $redefined[$key]);
                 } else {
-                    $result[$key] = $redefined[$value];
+                    $result[$key] = $value;
                 }
+                unset($redefined[$key]);
             } else {
                 $result[$key] = $value;
             }
         }
-        return $result;
+
+        return array_merge_recursive($result, $redefined);
     }
 
     /**
