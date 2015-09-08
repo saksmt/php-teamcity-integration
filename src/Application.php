@@ -94,7 +94,7 @@ class Application
                 if (is_array($redefined[$key]) && is_array($value)) {
                     $result[$key] = self::merge($value, $redefined[$key]);
                 } else {
-                    $result[$key] = $value;
+                    $result[$key] = $redefined[$key];
                 }
                 unset($redefined[$key]);
             } else {
